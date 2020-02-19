@@ -1,4 +1,4 @@
-<body class="bg-light">
+<body class="background-light">
   <section class="container">
     <div class="pad-tb-3 text-center">
       <h2>Hello There!</h2>
@@ -10,31 +10,33 @@
   </section>
 
   <section class="container">
-    <form [formGroup]="validationForm" class=" border border-light p-5">
-      <label for="input">Input:</label>
-      <input
-        id="input"
-        class="form-control"
-        type="text"
-        placeholder=""
-        formControlName="input"
-        (keyup)="onKeyUp($event)"
-      />
-      <small 
-        class="invalid-feedback" 
-        *ngIf="isNotNumber">
-        Invalid feedback
-      </small>
+    <form [formGroup]="validationForm" class="border border-light p-5">
+      <div class="mb-1">
+        <label for="input">Input:</label>
+        <input
+          id="input"
+          class="form-control"
+          type="text"
+          placeholder=""
+          formControlName="input"
+          (keyup)="onKeyUp($event)"
+        />
+        <small class="invalid-feedback" *ngIf="isNotNumber">
+          Error: invalid value provided.
+        </small>
+      </div>
 
-      <label for="output">Output:</label>
-      <input
-        id="output"
-        class="form-control"
-        type="text"
-        disabled
-        formControlName="output"
-        [value]="output"
-      />
+      <div class="mb-1">
+        <label for="output">Output:</label>
+        <input
+          id="output"
+          class="form-control"
+          type="text"
+          disabled
+          formControlName="output"
+          [value]="output"
+        />
+      </div>
     </form>
   </section>
   <footer class="footer text-center container">© MyWebsite 2020</footer>
