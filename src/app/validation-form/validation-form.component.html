@@ -1,0 +1,41 @@
+<body class="bg-light">
+  <section class="container">
+    <div class="pad-tb-3 text-center">
+      <h2>Hello There!</h2>
+      <p class="paragraph">
+        This is a task demonstrating my knowledge developing applications with
+        Angular.
+      </p>
+    </div>
+  </section>
+
+  <section class="container">
+    <form [formGroup]="validationForm" class=" border border-light p-5">
+      <label for="input">Input:</label>
+      <input
+        id="input"
+        class="form-control"
+        type="text"
+        placeholder=""
+        formControlName="input"
+        (keyup)="onKeyUp($event)"
+      />
+      <small 
+        class="invalid-feedback" 
+        *ngIf="isNotNumber">
+        Invalid feedback
+      </small>
+
+      <label for="output">Output:</label>
+      <input
+        id="output"
+        class="form-control"
+        type="text"
+        disabled
+        formControlName="output"
+        [value]="output"
+      />
+    </form>
+  </section>
+  <footer class="footer text-center container">© MyWebsite 2020</footer>
+</body>
