@@ -36,6 +36,5 @@ export class ValidationFormComponent implements OnInit {
         }
       }
     }
-    console.log(this.isNotNumber);
   }
 }
