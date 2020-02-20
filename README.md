@@ -1,3 +1,4 @@
+# Application preview
 ![App preview](./demo/kasko.gif)
 
 # KaskoForm
