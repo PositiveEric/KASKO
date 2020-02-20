@@ -18,9 +18,11 @@ export class ValidationFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onKeyUp(event: any) {
-    this.isNotNumber = false;
     const input = event.target.value;
-    if (isNaN(input)) {
+    this.isNotNumber = false;
+    this.output = "";
+    
+    if (isNaN(input) ) {
       this.isNotNumber = true;
       this.output = '';
     } else {
