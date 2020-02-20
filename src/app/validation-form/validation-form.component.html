@@ -10,16 +10,14 @@
   </section>
 
   <section class="container">
-    <form [formGroup]="validationForm" class="border border-light p-5">
+    <form [formGroup]="validationForm">
       <div class="mb-1">
         <label for="input">Input:</label>
         <input
-          id="input"
-          class="form-control"
           type="text"
-          placeholder=""
           formControlName="input"
           (keyup)="onKeyUp($event)"
+          [ngClass]="isNotNumber ? 'invalid-form' : 'form-control'"
         />
         <small class="invalid-feedback" *ngIf="isNotNumber">
           Error: invalid value provided.
@@ -29,10 +27,9 @@
       <div class="mb-1">
         <label for="output">Output:</label>
         <input
-          id="output"
-          class="form-control"
-          type="text"
           disabled
+          type="text"
+          class="form-control"
           formControlName="output"
           [value]="output"
         />
