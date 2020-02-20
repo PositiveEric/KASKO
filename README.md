@@ -1,4 +1,4 @@
-![App preview](demo/kasko.gif)
+![App preview](./demo/kasko.gif)
 
 # KaskoForm
 
